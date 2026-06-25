@@ -33,7 +33,7 @@ const Banner = ({ banners }) => {
             {/* name & description */}
             <div className="absolute md:top-2/3 top-40 left-4 lg:left-10 space-y-2">
                 <h2 className="text-md lg:text-3xl font-semibold">{banner.title}</h2>
-                <p className="lg:font-semibold md:text-sm text-[10px]">{banner.description}</p>
+                <p className="lg:font-semibold md:text-sm text-[10px] text-accent">{banner.description}</p>
             </div>
 
             {/* arrow btn to change */}

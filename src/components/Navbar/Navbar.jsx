@@ -56,7 +56,7 @@ const Navbar = () => {
 
 
             <div className="flex items-center justify-between p-2 px-4">
-                <div className="space-x-6 hidden md:flex lg:hidden">
+                <div className="space-x-6 hidden md:flex lg:hidden anchor">
                     {links}
                 </div>
                 <div className="flex items-center md:w-0 w-full text-end justify-end">
