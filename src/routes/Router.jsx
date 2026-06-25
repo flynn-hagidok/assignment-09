@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import Error from "../pages/Error/Error";
 import GamesDetails from "../pages/GameDetails/GamesDetails";
 import AuthLayout from "../layouts/AuthLayout";
+import Games from "../pages/Games/Games";
 
 
 const router = createBrowserRouter([
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
                     index: true,
                     Component: Home,
                 },
+                {
+                    path: "all-games",
+                    Component: Games,
+                    loader: () => fetch("/allGames.json")
+                }
             ]
 
     },

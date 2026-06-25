@@ -1,4 +1,4 @@
-
+import icon from "../../assets/logo.png"
 
 const Details = ({ game }) => {
 
@@ -6,6 +6,9 @@ const Details = ({ game }) => {
 
     return (
         <div className="md:flex items-center gap-10 md:w-11/12 lg:w-10/12 m-auto md:mt-10 p-4 md:p-0">
+            <title>{title}</title>
+            <link rel="shortcut icon" href={icon} type="image/x-icon" />
+
             <div className="h-60 md:w-[900px] lg:w-[1000px] md:h-[350px]">
                 <img src={coverPhoto} alt="" className="h-full object-fill" />
             </div>
@@ -21,7 +24,10 @@ const Details = ({ game }) => {
                     <p>Devloped by: {developer}</p>
                 </div>
 
-                <button className="btn btn-primary lg:mt-4">Download</button>
+                <div className="flex gap-4">
+                    <button className="btn btn-primary lg:mt-4">Download</button>
+                    <button className="btn btn-primary lg:mt-4">Whislist</button>
+                </div>
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ const Navbar = () => {
 
     const links = <>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/store">All Games</NavLink>
+        <NavLink to="/all-games">All Games</NavLink>
         <NavLink to="/download">Download</NavLink>
         <NavLink to="/whislist">Whislist</NavLink>
     </>
@@ -17,8 +17,8 @@ const Navbar = () => {
     const [open, setOpen] = useState(false)
 
     return (
-        <div>
-            <nav className="flex items-center justify-between shadow-md lg:p-4 p-2">
+        <div className="fixed top-0 left-0 w-full z-50 bg-secondary">
+            <nav className="flex items-center justify-between lg:p-4 p-2">
                 <div className="flex items-center gap-2">
                     {/* menu for sm device */}
                     <span onClick={() => setOpen(!open)} className="cursor-pointer md:hidden">

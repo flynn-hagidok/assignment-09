@@ -1,13 +1,14 @@
 import { Link } from "react-router";
 
-const PopularGames = ({ popularGame }) => {
 
-    const { id, title, coverPhoto, category, ratings, developer } = popularGame;
+const TopRated = ({ topGames }) => {
+
+    const { id, coverPhoto, title, category, ratings, developer } = topGames
 
     return (
         <Link to={`/auth/details/${id}`} className="p-6 cursor-pointer shadow-2xl shadow-secondary rounded-sm border-base-200 border-1">
             <div className="space-y-2">
-                <img src={coverPhoto} alt="" className="h-[250px] w-full object-fill rounded-md" />
+                <img src={coverPhoto} alt={title} className="h-[250px] w-full object-fill rounded-md" />
                 <h4 className="font-semibold md:text-xl">{title}</h4>
             </div>
             <div className="text-sm space-y-1 mt-2 text-accent">
@@ -23,4 +24,4 @@ const PopularGames = ({ popularGame }) => {
     );
 };
 
-export default PopularGames;
+export default TopRated;

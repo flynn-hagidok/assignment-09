@@ -1,8 +1,9 @@
 import { Link } from "react-router";
 
-const PopularGames = ({ popularGame }) => {
 
-    const { id, title, coverPhoto, category, ratings, developer } = popularGame;
+const AllGames = ({ game }) => {
+
+    const { id, coverPhoto, title, ratings, developer } = game;
 
     return (
         <Link to={`/auth/details/${id}`} className="p-6 cursor-pointer shadow-2xl shadow-secondary rounded-sm border-base-200 border-1">
@@ -12,7 +13,7 @@ const PopularGames = ({ popularGame }) => {
             </div>
             <div className="text-sm space-y-1 mt-2 text-accent">
                 <span className="flex justify-between">
-                    <p>Category: {category}</p>
+                    <p>Category: {title}</p>
                     <p>Ratings: {ratings}</p>
                 </span>
                 <span className="text-end">
@@ -23,4 +24,4 @@ const PopularGames = ({ popularGame }) => {
     );
 };
 
-export default PopularGames;
+export default AllGames;

@@ -6,7 +6,7 @@
         "category": "Action RPG",
         "downloadLink": "https://www.heishenhua.com",
         "description": "Action RPG inspired by Journey to the West.",
-        "ratings": "4.9",
+        "ratings": "4.8",
         "developer": "Game Science",
         "popular": true
     },
@@ -138,7 +138,7 @@
         "category": "Sports",
         "downloadLink": "https://www.ea.com/games/ea-sports-fc",
         "description": "Realistic football simulation game.",
-        "ratings": "4.5",
+        "ratings": "4.9",
         "developer": "EA Sports",
         "popular": false
     },
@@ -281,7 +281,7 @@
         "category": "RPG",
         "downloadLink": "https://www.hogwartslegacy.com",
         "description": "Magic-filled open-world adventure.",
-        "ratings": "4.8",
+        "ratings": "4.9",
         "developer": "Avalanche Software",
         "popular": false
     },
@@ -325,8 +325,118 @@
         "category": "RPG",
         "downloadLink": "https://www.monsterhunter.com",
         "description": "Hunt giant monsters in a dynamic ecosystem.",
-        "ratings": "4.8",
+        "ratings": "4.9",
         "developer": "Capcom",
+        "popular": false
+    },
+    {
+        "id": "31",
+        "title": "Palworld",
+        "coverPhoto": "/images/palworld.jpg",
+        "category": "Survival",
+        "downloadLink": "https://store.steampowered.com/app/1623730/Palworld/",
+        "description": "Capture creatures called Pals and use them for building, farming, and combat in a vast open world.",
+        "ratings": "4.7",
+        "developer": "Pocketpair",
+        "popular": true
+    },
+    {
+        "id": "32",
+        "title": "Helldivers 2",
+        "coverPhoto": "/images/helldivers2.jpg",
+        "category": "Action",
+        "downloadLink": "https://www.playstation.com/en-us/games/helldivers-2/",
+        "description": "Cooperative third-person shooter where players fight for Super Earth against alien threats.",
+        "ratings": "4.9",
+        "developer": "Arrowhead Game Studios",
+        "popular": true
+    },
+    {
+        "id": "33",
+        "title": "Stardew Valley",
+        "coverPhoto": "/images/stardew-valley.jpg",
+        "category": "Simulation",
+        "downloadLink": "https://www.stardewvalley.net/",
+        "description": "Build your dream farm, raise animals, and explore a charming countryside world.",
+        "ratings": "4.9",
+        "developer": "ConcernedApe",
+        "popular": true
+    },
+    {
+        "id": "34",
+        "title": "Terraria",
+        "coverPhoto": "/images/terraria.jpg",
+        "category": "Adventure",
+        "downloadLink": "https://terraria.org/",
+        "description": "Explore, build, fight, and survive in a procedurally generated 2D sandbox world.",
+        "ratings": "4.8",
+        "developer": "Re-Logic",
+        "popular": true
+    },
+    {
+        "id": "35",
+        "title": "Overwatch 2",
+        "coverPhoto": "/images/overwatch2.jpg",
+        "category": "Hero Shooter",
+        "downloadLink": "https://overwatch.blizzard.com/",
+        "description": "Team-based hero shooter featuring unique characters and objective-focused gameplay.",
+        "ratings": "4.4",
+        "developer": "Blizzard Entertainment",
+        "popular": true
+    },
+    {
+        "id": "36",
+        "title": "The Finals",
+        "coverPhoto": "/images/the-finals.jpg",
+        "category": "FPS",
+        "downloadLink": "https://www.reachthefinals.com/",
+        "description": "Fast-paced competitive shooter with fully destructible environments.",
+        "ratings": "4.6",
+        "developer": "Embark Studios",
+        "popular": false
+    },
+    {
+        "id": "37",
+        "title": "ARK: Survival Ascended",
+        "coverPhoto": "/images/ark.jpg",
+        "category": "Survival",
+        "downloadLink": "https://survivetheark.com/",
+        "description": "Tame dinosaurs, build bases, and survive in a prehistoric world.",
+        "ratings": "4.5",
+        "developer": "Studio Wildcard",
+        "popular": false
+    },
+    {
+        "id": "38",
+        "title": "World of Warcraft",
+        "coverPhoto": "/images/wow.jpg",
+        "category": "MMORPG",
+        "downloadLink": "https://worldofwarcraft.blizzard.com/",
+        "description": "One of the most iconic MMORPGs featuring expansive worlds and epic raids.",
+        "ratings": "4.9",
+        "developer": "Blizzard Entertainment",
+        "popular": true
+    },
+    {
+        "id": "39",
+        "title": "Diablo IV",
+        "coverPhoto": "/images/diablo4.jpg",
+        "category": "Action RPG",
+        "downloadLink": "https://diablo4.blizzard.com/",
+        "description": "Dark fantasy action RPG with intense combat and deep character customization.",
+        "ratings": "4.6",
+        "developer": "Blizzard Entertainment",
+        "popular": true
+    },
+    {
+        "id": "40",
+        "title": "Civilization VII",
+        "coverPhoto": "/images/civilization7.jpg",
+        "category": "Strategy",
+        "downloadLink": "https://civilization.2k.com/",
+        "description": "Lead a civilization through history and build a global empire through strategy and diplomacy.",
+        "ratings": "4.5",
+        "developer": "Firaxis Games",
         "popular": false
     }
 ]
