@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import Loading from "../Loader/Loding"
 
@@ -6,19 +6,29 @@ const Banner = ({ banners }) => {
 
     const [current, setCurrent] = useState(0)
 
-    if(!banners || banners.length === 0){
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % banners.length);
+        }, 2000);
+
+        return () => clearInterval(interval)
+    }, [banners.length])
+
+    if (!banners || banners.length === 0) {
         return <Loading></Loading>
     }
 
+    // next slide 
     const nextSlide = () => {
-        setCurrent((current + 1) % banners.length);
+        setCurrent((prev) => (prev + 1) % banners.length);
     }
     const prevSlide = () => {
-        setCurrent(
-            current === 0 ? banners.length - 1 : current - 1
+        setCurrent(prev =>
+            prev === 0 ? banners.length - 1 : prev - 1
         )
     }
 
+    // previous slide
     const banner = banners[current]
 
     return (

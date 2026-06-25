@@ -43,7 +43,7 @@ const Navbar = () => {
 
                 {/* auth btn & search bar */}
                 <div className="flex items-center lg:space-x-4 md:space-x-4 space-x-2">
-                    {search && (<input type="text" placeholder="Search games" className="hidden lg:flex absolute right-67 w-80 border px-3 py-1 rounded-md">
+                    {search && (<input type="text" placeholder="Search games" className="hidden lg:flex absolute right-67 w-80 border px-3 py-1 rounded-md bg-secondary">
                     </input>)}
                     <button onClick={() => setSearch(!search)} className="btn btn-circle hidden lg:flex">
                         <FaSearch className="h-4 w-4" />
