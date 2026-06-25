@@ -47,7 +47,9 @@ const Home = () => {
             </div>
 
             {/* newsletter section  */}
+            <div className="lg:w-7/12 m-auto">
                 <NewsLetter></NewsLetter>
+            </div>
         </div>
     );
 };

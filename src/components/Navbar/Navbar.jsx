@@ -49,8 +49,8 @@ const Navbar = () => {
                         <FaSearch className="h-4 w-4" />
                     </button>
 
-                    <NavLink to="/login" className="btn bg-primary text-accent border-0 lg:px-6 md:px-6">Login</NavLink>
-                    <NavLink to="/register" className="btn bg-primary text-accent border-0 lg:px-6 md:px-6">Register</NavLink>
+                    <NavLink to="/login" className="btn bg-primary border-0 lg:px-6 md:px-6">Login</NavLink>
+                    <NavLink to="/register" className="btn bg-primary border-0 lg:px-6 md:px-6">Register</NavLink>
                 </div>
             </nav>
 

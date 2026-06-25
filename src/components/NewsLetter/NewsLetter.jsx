@@ -2,7 +2,7 @@
 
 const NewsLetter = () => {
     return (
-        <div className="bg-base-200 py-12 rounded-xl text-center mt-14">
+        <div className="bg-base-200 py-20 lg:py-40 lg:rounded-xl text-center mt-14">
             <h2 className="text-3xl font-bold mb-3">
                 Stay Updated
             </h2>
