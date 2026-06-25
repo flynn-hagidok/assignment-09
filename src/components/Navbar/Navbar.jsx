@@ -37,7 +37,7 @@ const Navbar = () => {
                 </div>
 
                 {/*nav link */}
-                <div className="space-x-6 hidden lg:flex">
+                <div className="space-x-6 hidden lg:flex anchor">
                     {links}
                 </div>
 
