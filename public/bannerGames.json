@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "title": "PlayerUnknown's Battlegrounds: PUBG",
+        "coverPhoto": "https://images.unsplash.com/photo-1542751371-adc38448a05e",
+        "bannerPhoto" : "https://i.ibb.co.com/mCs6XSB0/PUBG.jpg",
+        "category": "Battle Royale",
+        "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+        "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+        "ratings": "4.5",
+        "developer": "Krafton"
+    },
+    {
+        "id": "2",
+        "title": "Free Fire",
+        "coverPhoto": "https://images.unsplash.com/photo-1511512578047-dfb367046420",
+        "bannerPhoto" : "https://i.ibb.co.com/h1YQcQgC/Free-Fire.jpg",
+        "category": "Battle Royale",
+        "downloadLink": "https://ff.garena.com",
+        "description": "Free Fire is a survival shooter game where players compete against others in quick and intense battle royale matches.",
+        "ratings": "4.4",
+        "developer": "Garena"
+    },
+    {
+        "id": "3",
+        "title": "Call of Duty: Mobile",
+        "coverPhoto": "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8",
+        "bannerPhoto" : "https://i.ibb.co.com/pBZQS1F5/Call-of-Duty.jpg",
+        "category": "FPS",
+        "downloadLink": "https://www.callofduty.com/mobile",
+        "description": "Call of Duty Mobile delivers classic multiplayer modes, battle royale gameplay, and high-quality shooting mechanics.",
+        "ratings": "4.7",
+        "developer": "Activision"
+    },
+    {
+        "id": "4",
+        "title": "Valorant",
+        "coverPhoto": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+        "bannerPhoto" : "https://i.ibb.co.com/nWCXcLQ/Valorant.png",
+        "category": "FPS",
+        "downloadLink": "https://playvalorant.com",
+        "description": "Valorant is a tactical shooter that combines precise gunplay with unique agent abilities.",
+        "ratings": "4.8",
+        "developer": "Riot Games"
+    },
+    {
+        "id": "5",
+        "title": "Fortnite",
+        "coverPhoto": "https://images.unsplash.com/photo-1511882150382-421056c89033",
+        "bannerPhoto" : "https://i.ibb.co.com/HLr9vsbz/Fornite.jpg",
+        "category": "Battle Royale",
+        "downloadLink": "https://www.fortnite.com",
+        "description": "Fortnite combines building mechanics, creative gameplay, and battle royale action into one exciting experience.",
+        "ratings": "4.7",
+        "developer": "Epic Games"
+    },
+    {
+        "id": "6",
+        "title": "Minecraft",
+        "coverPhoto": "https://images.unsplash.com/photo-1627856013091-fed6e4e30025",
+        "bannerPhoto" : "https://i.ibb.co.com/t0nTLtn/Minecraft.jpg",
+        "category": "Sandbox",
+        "downloadLink": "https://www.minecraft.net",
+        "description": "Minecraft is a sandbox game where players explore, build, craft, and survive in block-based worlds.",
+        "ratings": "4.9",
+        "developer": "Mojang Studios"
+    },
+    {
+        "id": "7",
+        "title": "Grand Theft Auto V",
+        "coverPhoto": "https://images.unsplash.com/photo-1550745165-9bc0b252726f",
+        "bannerPhoto" : "https://i.ibb.co.com/vCTMH4Q7/GTA5.jpg",
+        "category": "Action",
+        "downloadLink": "https://www.rockstargames.com/gta-v",
+        "description": "GTA V offers an expansive open world filled with missions, action, and online multiplayer adventures.",
+        "ratings": "4.9",
+        "developer": "Rockstar Games"
+    },
+    {
+        "id": "8",
+        "title": "League of Legends",
+        "coverPhoto": "https://images.unsplash.com/photo-1542751110-97427bbecf20",
+        "bannerPhoto" : "https://i.ibb.co.com/q3Pcv7zS/League-of-Legends.jpg",
+        "category": "MOBA",
+        "downloadLink": "https://www.leagueoflegends.com",
+        "description": "League of Legends is a competitive MOBA where teams battle strategically to destroy the enemy nexus.",
+        "ratings": "4.6",
+        "developer": "Riot Games"
+    }
+]
