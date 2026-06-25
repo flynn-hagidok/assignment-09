@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Banner from "../../components/Banner/Banner";
 import PopularGames from "../../components/PopularGames/PopularGames";
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
-// import Banner2 from "../../components/Banner/Banner2";
+import homeIcon from "../../assets/logo.png"
 
 const Home = () => {
 
@@ -28,6 +28,8 @@ const Home = () => {
 
     return (
         <div className="space-y-14">
+            <title>Home</title>
+            <link rel="shortcut icon" href={homeIcon} type="image/x-icon" />
             {/* banner section  */}
             <Banner banners={banners}></Banner>
 

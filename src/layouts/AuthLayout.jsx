@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
 
-const MainLayout = () => {
+const AuthLayout = () => {
     return (
         <div className="flex flex-col h-screen">
             <header>
@@ -19,4 +19,4 @@ const MainLayout = () => {
     );
 };
 
-export default MainLayout;
+export default AuthLayout;

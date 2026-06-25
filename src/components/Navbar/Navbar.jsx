@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <div>
             <nav className="flex items-center justify-between shadow-md lg:p-4 p-2">
-                <div className="flex items-center">
+                <div className="flex items-center gap-2">
                     {/* menu for sm device */}
                     <span onClick={() => setOpen(!open)} className="cursor-pointer md:hidden">
                         {
@@ -30,7 +30,7 @@ const Navbar = () => {
                         </ul>
                     </span>
 
-                    <NavLink to="/" className="flex items-center">
+                    <NavLink to="/" className="flex items-center gap-1">
                         <img src={logo} alt="" className="w-9" />
                         <h3 className="lg:text-2xl font-semibold">GameHub</h3>
                     </NavLink>

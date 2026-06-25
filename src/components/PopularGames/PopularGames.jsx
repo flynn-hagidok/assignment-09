@@ -1,11 +1,11 @@
-
+import { NavLink } from "react-router";
 
 const PopularGames = ({ popularGame }) => {
 
-    const { title, coverPhoto, category, ratings, developer } = popularGame;
+    const { id, title, coverPhoto, category, ratings, developer } = popularGame;
 
     return (
-        <div className="p-6 cursor-pointer shadow-2xl shadow-secondary rounded-sm">
+        <NavLink to={`/auth/details/${id}`} className="p-6 cursor-pointer shadow-2xl shadow-secondary rounded-sm">
             <div className="space-y-2">
                 <img src={coverPhoto} alt="" className="h-[250px] w-full object-fill rounded-md" />
                 <h4 className="font-semibold md:text-xl">{title}</h4>
@@ -19,7 +19,7 @@ const PopularGames = ({ popularGame }) => {
                     <p>Developed by: {developer}</p>
                 </span>
             </div>
-        </div>
+        </NavLink>
     );
 };
 
