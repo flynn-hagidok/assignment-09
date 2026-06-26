@@ -9,7 +9,7 @@ const GamesDetails = () => {
     const filterGames = gameData.filter(gameDetails => parseInt(gameDetails.id) === parseInt(id))
 
     return (
-        <div className="mt-30 md:mt-40">
+        <div className="mt-20 md:mt-38">
             <title></title>
             {
                 filterGames.map(game => <Details key={game.id} game={game}></Details>)

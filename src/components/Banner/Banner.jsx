@@ -32,7 +32,7 @@ const Banner = ({ banners }) => {
     const banner = banners[current]
 
     return (
-        <div className="w-full md:h-[350px] lg:h-[560px] h-64 relative mt-32 lg:mt-24">
+        <div className="w-full md:h-[350px] lg:h-[560px] h-64 relative mt-20 md:mt-26 lg:mt-24">
             <div className="h-full">
                 <img src={banner.bannerPhoto} alt="" className="h-full w-full object-fill" />
             </div>

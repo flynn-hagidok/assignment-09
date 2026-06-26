@@ -1,6 +1,5 @@
 import { NavLink, useNavigate } from "react-router";
 import logo from "../../assets/logo.png"
-import { FaSearch } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { AuthContext } from "../../provider/AuthContext";
@@ -13,12 +12,12 @@ const Navbar = () => {
     const links = <>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/all-games">All Games</NavLink>
-        <NavLink to="/download">Download</NavLink>
-        <NavLink to="/whislist">Whislist</NavLink>
+        {/* <NavLink to="/download">Download</NavLink> */}
+        {/* <NavLink to="/whislist">Whislist</NavLink> */}
     </>
 
-    const [search, setSearch] = useState(false)
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+
 
     const handleSingOut = () => {
         userLogOut()
@@ -28,7 +27,6 @@ const Navbar = () => {
                 console.log(error.message);
             })
     }
-    console.log(user?.displayName, user?.photoURL);
 
     return (
         <div className="fixed top-0 left-0 w-full z-50 bg-secondary">
@@ -57,21 +55,11 @@ const Navbar = () => {
 
                 {/* auth btn & search bar */}
                 <div className="flex items-center lg:space-x-4 md:space-x-4 space-x-2">
-                    {search && (<input type="text" placeholder="Search games" className="hidden lg:flex absolute right-57 w-80 border px-3 py-1 rounded-md bg-secondary">
-                    </input>)}
-                    <button onClick={() => setSearch(!search)} className="btn btn-circle hidden lg:flex">
-                        <FaSearch className="h-4 w-4" />
-                    </button>
-
-                    {/* <div>
-                        <img src={logo} alt="" className="w-12 h-12 rounded-[50%] border-2" />
-                    </div> */}
-
                     {user ? <>
-                        <NavLink><img src={user.photoURL} alt="" className="w-12 h-12 rounded-[50%] object-fill cursor-pointer" /></NavLink>
+                        <NavLink to="/"><img src={user.photoURL} alt="" className="w-12 h-12 rounded-[50%] object-fill cursor-pointer" /></NavLink>
                         <NavLink to="/login" onClick={handleSingOut} className="btn bg-primary border-0 lg:px-6 md:px-6">Log Out</NavLink>
                     </> : <>
-                        <NavLink to="/login" onClick={() => handleSingOut} className="btn bg-primary border-0 lg:px-6 md:px-6">Log In</NavLink>
+                        <NavLink to="/login" className="btn bg-primary border-0 lg:px-6 md:px-6">Log In</NavLink>
                         <NavLink to="/register" className="btn bg-primary border-0 lg:px-6 md:px-6">Register</NavLink>
                     </>}
                 </div>
@@ -80,13 +68,6 @@ const Navbar = () => {
             <div className="flex items-center justify-between p-2 px-4">
                 <div className="space-x-6 hidden md:flex lg:hidden anchor">
                     {links}
-                </div>
-                <div className="flex items-center md:w-0 w-full text-end justify-end">
-                    {search && (<input type="text" placeholder="Search games" className="lg:hidden absolute right-16 w-70 border px-3 py-1 rounded-md">
-                    </input>)}
-                    <button onClick={() => setSearch(!search)} className="btn btn-circle lg:hidden border-2">
-                        <FaSearch className="h-4 w-4" />
-                    </button>
                 </div>
             </div>
         </div>
