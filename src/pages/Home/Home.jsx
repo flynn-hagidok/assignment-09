@@ -3,25 +3,37 @@ import Banner from "../../components/Banner/Banner";
 import PopularGames from "../../components/PopularGames/PopularGames";
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
 import homeIcon from "../../assets/logo.png"
+import Loading from "../../components/Loading/Loading"
 
 const Home = () => {
 
     const [banners, setBanners] = useState([])
     const [popular, setPopular] = useState([])
+    const [loading, setLoading] = useState(true)
 
     // banner games data
     useEffect(() => {
         fetch("/bannerGames.json")
             .then(res => res.json())
-            .then(data => setBanners(data))
+            .then(data => {
+                setBanners(data);
+                setLoading(false);
+            })
     }, [])
 
     // popular games data
     useEffect(() => {
         fetch("/allGames.json")
             .then(res => res.json())
-            .then(data => setPopular(data))
+            .then(data => {
+                setPopular(data);
+                setLoading(false);
+            })
     }, [])
+
+    if (loading) {
+        return <Loading></Loading>;
+    }
 
     const popularGames = popular.filter(game => game.popular === true)
 

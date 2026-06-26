@@ -10,7 +10,6 @@ const Games = () => {
     const [showAll, setShowAll] = useState(false)
     const [popular, setPopular] = useState(false)
     const [allGames, setAllGames] = useState(false)
-
     const games = useLoaderData()
 
     const topRated = games.filter(rated => rated.ratings >= 4.9)

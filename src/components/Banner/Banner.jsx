@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
-import Loading from "../Loader/Loding"
+import Loading from "../Loading/Loading"
 
 const Banner = ({ banners }) => {
 
