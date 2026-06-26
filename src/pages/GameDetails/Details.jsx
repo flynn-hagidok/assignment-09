@@ -26,7 +26,7 @@ const Details = ({ game }) => {
 
                 <div className="flex gap-4">
                     <button className="btn btn-primary lg:mt-4">Download</button>
-                    <button className="btn btn-primary lg:mt-4">Whislist</button>
+                    {/* <button className="btn btn-primary lg:mt-4">Whislist</button> */}
                 </div>
             </div>
         </div>
