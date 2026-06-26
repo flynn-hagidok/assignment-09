@@ -2,13 +2,15 @@ import { useContext, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../provider/AuthContext";
+import { toast } from "react-toastify";
 
 
 const Login = () => {
 
-    const { userLogin, userGoogleLogin } = useContext(AuthContext)
+    const { userLogin, userGoogleLogin, passReset } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false)
     const [error, setError] = useState()
+    const [email, setEmail] = useState("")
     const location = useLocation()
     const from = location.state?.from?.pathname || "/"
 
@@ -33,11 +35,25 @@ const Login = () => {
 
     const handleGoogleLogin = () => {
         userGoogleLogin()
-        .then(() => {
-            navigate(from, {replace: true})
-        }).catch(() => {
+            .then(() => {
+                navigate(from, { replace: true })
+            }).catch(() => {
 
-        }) 
+            })
+    }
+
+    const resetPass = () => {
+        if (!email) {
+            toast("Please enter your email first.")
+            return;
+        }
+        passReset(email)
+            .then(() => {
+                toast("password reset email sent. please check your inbox")
+             })
+            .catch(() => {
+                toast("sorry")
+             })
     }
 
     return (
@@ -58,7 +74,7 @@ const Login = () => {
 
                         {/* email  */}
                         <label className="label">Email</label>
-                        <input type="email" name="email" className="input" placeholder="Email" />
+                        <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} className="input" placeholder="Email" />
 
                         {/* password */}
                         <label className="label">Password</label>
@@ -68,7 +84,8 @@ const Login = () => {
                         </div>
 
                         {/* forget password */}
-                        <div><a className="link link-hover">Forgot password?</a></div>
+                        <div><a className="link link-hover" onClick={resetPass}>Forgot password?</a></div>
+
                         <button className="btn btn-neutral mt-4">Login</button>
 
                         <p className="mt-2 text-center">Don't have an acoount? <Link to="/register" className="link link-hover text-primary">Register</Link></p>

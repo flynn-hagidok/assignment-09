@@ -63,7 +63,7 @@ const Register = () => {
                     <fieldset className="fieldset">
                         {/* name */}
                         <label className="label">Name</label>
-                        <input type="text" name="name" className="input" placeholder="Name" />
+                        <input type="text" name="name" className="input" placeholder="Name" required/>
 
                         {/*photo url */}
                         <label className="label">Name</label>
@@ -71,12 +71,12 @@ const Register = () => {
 
                         {/* email  */}
                         <label className="label">Email</label>
-                        <input type="email" name="email" className="input" placeholder="Email" />
+                        <input type="email" name="email" className="input" placeholder="Email" required/>
 
                         {/* password */}
                         <label className="label">Password</label>
                         <div className="relative">
-                            <input type={showPassword ? "text" : "password"} name="password" className="input" placeholder="Password" />
+                            <input type={showPassword ? "text" : "password"} name="password" className="input" placeholder="Password" required/>
                             <button type="button" onClick={() => setShowPassword(!showPassword)}><FaEye className="absolute right-6 top-1/2 -translate-y-1/2 cursor-pointer" /></button>
                         </div>
 
