@@ -3,6 +3,7 @@ import { FaEye } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../provider/AuthContext";
 import { toast } from "react-toastify";
+import Loading_1 from "../../components/Loading/Loading_1";
 
 
 const Login = () => {
@@ -11,8 +12,9 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
     const [error, setError] = useState()
     const [email, setEmail] = useState("")
+    const [LoginLoading, setLoginLoading] = useState(false)
     const location = useLocation()
-    const from = location.state?.from?.pathname || "/"
+    const from = location.state?.from?.pathname || "/";
 
 
     const navigate = useNavigate()
@@ -22,7 +24,10 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+
+        setError("")
+        setLoginLoading(true)
+
         userLogin(email, password)
             .then(() => {
                 navigate(from, { replace: true })
@@ -31,9 +36,15 @@ const Login = () => {
                 const errorMsg = error.message;
                 setError(errorMsg)
             })
+            .finally(() => {
+                setLoginLoading(false)
+            })
     }
 
     const handleGoogleLogin = () => {
+
+        setError("")
+
         userGoogleLogin()
             .then(() => {
                 navigate(from, { replace: true })
@@ -50,10 +61,10 @@ const Login = () => {
         passReset(email)
             .then(() => {
                 toast("password reset email sent. please check your inbox")
-             })
+            })
             .catch(() => {
                 toast("sorry")
-             })
+            })
     }
 
     return (
@@ -68,25 +79,25 @@ const Login = () => {
                         </button>
 
                         <p className="text-center border-b-2 my-4 border-accent"></p>
-                        {
-                            error && <p className="text-center text-red-400 font-semibold mt-2 text-md">Please provide correct information!</p>
-                        }
-
                         {/* email  */}
                         <label className="label">Email</label>
-                        <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} className="input" placeholder="Email" />
+                        <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} className="input" placeholder="Email" required/>
 
                         {/* password */}
                         <label className="label">Password</label>
                         <div className="relative">
-                            <input type={showPassword ? "text" : "password"} name="password" className="input" placeholder="Password" />
+                            <input type={showPassword ? "text" : "password"} name="password" className="input" placeholder="Password" required/>
                             <button type="button" onClick={() => setShowPassword(!showPassword)}><FaEye className="absolute right-6 top-1/2 -translate-y-1/2 cursor-pointer" /></button>
                         </div>
 
                         {/* forget password */}
                         <div><a className="link link-hover" onClick={resetPass}>Forgot password?</a></div>
 
-                        <button className="btn btn-neutral mt-4">Login</button>
+                        {
+                            error && <p className="text-center text-red-400 font-semibold mt-2 text-md">Please provide correct information!</p>
+                        }
+
+                        <button className="btn btn-neutral mt-4" disabled={LoginLoading}>{LoginLoading ? <Loading_1></Loading_1> : "Login"}</button>
 
                         <p className="mt-2 text-center">Don't have an acoount? <Link to="/register" className="link link-hover text-primary">Register</Link></p>
                     </fieldset>

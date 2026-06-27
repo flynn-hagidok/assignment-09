@@ -6,9 +6,12 @@ const NewsLetter = () => {
     const onSubmit = (e) => {
         e.preventDefault()
         const inValue = e.target.email.value
-        console.log(inValue)
-        toast("Thanks for subcribe!")
         e.target.reset("")
+        if (inValue) {
+            return toast.success("Thanks for subcribe!")
+        } else {
+            return toast.warning("Enter your email")
+        }
     }
 
     return (

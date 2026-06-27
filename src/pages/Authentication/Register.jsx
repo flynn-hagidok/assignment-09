@@ -2,12 +2,14 @@ import { useContext, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../provider/AuthContext";
+import Loading_1 from "../../components/Loading/Loading_1";
 
 
 const Register = () => {
 
     const { createUser, userProfile, setUser, user } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
+    const [regLoading, setRegLoading] = useState(false)
     const [error, setError] = useState()
     const navigate = useNavigate();
 
@@ -35,23 +37,31 @@ const Register = () => {
 
         const password = form.password.value;
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
-        if (!passwordRegex) {
+        if (!passwordRegex.test(password)) {
             alert("password should be minimun 6 character")
             return;
         }
-        console.log(name, email, password, photo);
+
+        setError("")
+
+        setRegLoading(true);
 
         createUser(email, password)
             .then(() => {
                 userProfile({ displayName: name, photoURL: photo })
                     .then(() => {
-                        setUser({...user, displayName: name, photoURL: photo})
+                        setUser({ ...user, displayName: name, photoURL: photo })
+                        form.reset("")
                         navigate("/")
                     }).catch(() => { })
+
             })
             .catch(error => {
                 const errorMsg = error.message;
                 setError(errorMsg);
+            })
+            .finally(() => {
+                setRegLoading(false)
             })
     }
 
@@ -63,27 +73,29 @@ const Register = () => {
                     <fieldset className="fieldset">
                         {/* name */}
                         <label className="label">Name</label>
-                        <input type="text" name="name" className="input" placeholder="Name" required/>
+                        <input type="text" name="name" className="input" placeholder="Name" required />
 
                         {/*photo url */}
-                        <label className="label">Name</label>
+                        <label className="label">Photo URL</label>
                         <input type="url" name="photo" className="input" placeholder="PhotoURL" />
 
                         {/* email  */}
                         <label className="label">Email</label>
-                        <input type="email" name="email" className="input" placeholder="Email" required/>
+                        <input type="email" name="email" className="input" placeholder="Email" required />
 
                         {/* password */}
                         <label className="label">Password</label>
                         <div className="relative">
-                            <input type={showPassword ? "text" : "password"} name="password" className="input" placeholder="Password" required/>
+                            <input type={showPassword ? "text" : "password"} name="password" className="input" placeholder="Password" required />
                             <button type="button" onClick={() => setShowPassword(!showPassword)}><FaEye className="absolute right-6 top-1/2 -translate-y-1/2 cursor-pointer" /></button>
                         </div>
 
                         {/* forget password */}
                         <div><a className="link link-hover">Forgot password?</a></div>
+
                         <p className="text-center">{error ? "Email already in use!" : ""}</p>
-                        <button className="btn btn-neutral mt-4">Register</button>
+
+                        <button className="btn btn-neutral mt-4" disabled={regLoading}>{regLoading ? <Loading_1></Loading_1> : "Register"}</button>
 
                         <p className="mt-2 text-center">Already have an acoount? <Link to="/login" className="link link-hover text-primary">Login</Link></p>
                     </fieldset>

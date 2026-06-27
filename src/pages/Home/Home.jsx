@@ -52,7 +52,7 @@ const Home = () => {
                 </h2>
 
                 {/* popular games card */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {
                         popularGames.slice(0, 9).map(popularGame => <PopularGames key={popularGame.id} popularGame={popularGame}></PopularGames>)
                     }

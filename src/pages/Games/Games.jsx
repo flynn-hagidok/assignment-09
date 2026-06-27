@@ -25,7 +25,7 @@ const Games = () => {
             <title>All Games</title>
             {/* top rated games */}
             <h2 className="text-2xl font-semibold">Top Rated Games</h2>
-            <div className="md:grid grid-cols-2 gap-6 lg:grid-cols-3 mt-4">
+            <div className="md:grid grid-cols-2 gap-10 lg:grid-cols-3 mt-4">
                 {
                     displayGames.map(topGames => <TopRated key={topGames.id} topGames={topGames}></TopRated>)
                 }
@@ -41,7 +41,7 @@ const Games = () => {
             }
 
             <h2 className="text-2xl font-semibold mt-6">Popular Games</h2>
-            <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                     diplayPopular.map(popular => <MostPopular key={popular.id} popular={popular}></MostPopular>)
                 }
@@ -57,7 +57,7 @@ const Games = () => {
             }
 
             <h2 className="text-2xl font-semibold mt-6">All Games</h2>
-            <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-6">
                 {
                     displayAllGames.map(game => <AllGames key={game.id} game={game}></AllGames>)
                 }
