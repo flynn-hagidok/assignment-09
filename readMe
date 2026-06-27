@@ -1,0 +1,21 @@
+Project Name: GameHub
+
+Purpose: The Game Review Platform is a web application where users can explore, review, and manage video game reviews. Users can register, log in, browse reviews, add their own reviews, update or delete them, and discover top-rated games through an attractive and responsive interface.
+
+Key-featured: Firebase Authentication(Email & Password and Google signIn).
+Toast notifications for user actions.
+Show/Hide Password functionality.
+Loading spinner while authentication state is being checked.
+Fully Responsive Design.
+
+NPM Package: react
+react-dom
+react-router
+firebase
+react-icons
+react-toastify
+tailwindcss
+daisyui
+motion
+
+https://gamehub-fleming.netlify.app/
